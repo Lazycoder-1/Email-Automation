@@ -1,17 +1,32 @@
 
+# Email Automation using Python
+
 # import smtplib
-# def email_automation():
+# user_email = input('Enter your email: ')
+# message = input('Enter your message here: ')
+
+# def email_automation(user_email,message):
 #     server = smtplib.SMTP('smtp.gmail.com',587)
 #     server.starttls()
 #     server.login('amoakoheneafirim@gmail.com','Bohr2015')
-#     server.sendmail('amoakoheneafirim@gmail.com','sma84762@doolk.com', 'a simple testing email')
+#     server.sendmail('amoakoheneafirim@gmail.com',user_email, message) 
 #     server.close()
 
-# email_automation()
+# email_automation(user_email,message)
+
+
+
+
+
+
+
+
+
 
 import smtplib
-from email.mime.text import MIMEText
-
+# from email.mime.text import MIMEText
+user_email = input('Enter your email: ')
+message = input('Enter your message here: ')
 def email_automation():
     try:
         # Establish a connection to the Gmail SMTP server
@@ -23,9 +38,9 @@ def email_automation():
         
         # Create the email content
         from_addr = 'amoakoheneafirim@gmail.com'
-        to_addr = 'dasonex818@luravell.com'
-        subject = 'A simple testing email'
-        body = 'This is a test email from a Python script.'
+        # to_addr = 'sma84762@doolk.com'
+        # subject = 'A simple testing email'
+        # body = 'This is a test email from a Python script.'
         
         # Construct the email message
         msg = MIMEText(body)
